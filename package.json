@@ -1,0 +1,23 @@
+{
+  "name": "exercicio-micro2_26-piaget",
+  "version": "1.0.0",
+  "description": "Repositório criado para acompanhar as aulas e atividades da disciplina de Microsserviços do curso de Análise e Desenvolvimento de Sistemas.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/simoesmarcos96/exercicio-micro2_26-piaget.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/simoesmarcos96/exercicio-micro2_26-piaget/issues"
+  },
+  "homepage": "https://github.com/simoesmarcos96/exercicio-micro2_26-piaget#readme",
+  "dependencies": {
+    "express": "^5.2.1"
+  }
+}
