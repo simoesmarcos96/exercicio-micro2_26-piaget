@@ -1,13 +1,26 @@
+require('dotenv').config();
 
 const express = require('express');
+const connectDatabase = require('./config/database');
+const alunosRoutes = require('./routes/alunos');
 
 const app = express();
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
+
+app.use(express.json());
 
 app.get('/', (req, res) => {
-    res.send('Api feita por: Marcos Vinicius Simões, 2428054');
+    res.send('API de alunos funcionando!');
 });
 
-app.listen(PORT, () => {
-    console.log(`API rodando em http://localhost:${PORT}`);
-});
+app.use('/alunos', alunosRoutes);
+
+const iniciarServidor = async () => {
+    await connectDatabase();
+
+    app.listen(PORT, () => {
+        console.log(`API rodando em http://localhost:${PORT}`);
+    });
+};
+
+iniciarServidor();
